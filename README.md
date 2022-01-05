@@ -5,7 +5,7 @@ I have used MLP Neural Network to Forecast Sales.
 
 ## Results
 
-(input.png)
+![1](input.png)
 
 ![2](output1.png)
 
