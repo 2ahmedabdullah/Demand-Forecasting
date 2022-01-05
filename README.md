@@ -7,8 +7,8 @@ I have used MLP Neural Network to Forecast Sales.
 
 ![1](input.png)
 
-![2](https://drive.google.com/file/d/1Z7NkiNrPUtrlfUyb06BwwfQDWBmH9sIG/view?usp=sharing)
+![2](output1.png)
 
-![3](https://drive.google.com/file/d/1AgRIazx0j1K6fB25plouDRY22uVnH6Qx/view?usp=sharing)
+![3](output2.png)
 
 
