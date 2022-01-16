@@ -2,6 +2,10 @@
 
 The objective was to predict 3 months of item-level sales data at different store locations using the 5 years history of sales.
 
+<p align="center">
+   <img src="demad.webp">
+</p>
+
 I have used MLP Neural Network to Forecast Sales.
 
 
