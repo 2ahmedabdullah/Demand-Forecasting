@@ -87,3 +87,27 @@ v = np.sqrt(np.sum(diff)/len(diff))
 print('Log Root Mean Square Error: ', round(v,3))
 
 
+
+###########################################################################BORUTA#######################################
+from boruta import BorutaPy
+# define Boruta feature selection method
+feat_selector = BorutaPy(model, n_estimators='auto', verbose=2, random_state=1)
+# find all relevant features - 5 features should be selected
+X = X_train.iloc[:,:].values
+feat_selector.fit(X, y_train)
+
+feature_names = np.array(X_train.columns)
+feature_ranks = pd.DataFrame({'Feature_names': feature_names,
+                             'Support': feat_selector.support_,
+                             'Ranks': feat_selector.ranking_})
+feature_ranks.sort_values(by=['Ranks'], ascending=True, inplace=True)
+feature_ranks1 = feature_ranks[feature_ranks['Support']== True]
+
+# call transform() on X to filter it down to selected features
+k = len(feature_ranks1)
+sel = feature_ranks.head(k)
+selected_featss = sel['Feature_names'].to_list()
+
+X_filtered_train = X_train[selected_featss]
+X_filtered_test = X_test[selected_featss]
+
